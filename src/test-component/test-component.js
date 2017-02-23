@@ -5,16 +5,19 @@ const testComponent = ({ text, onClick }) => {
     let input;
 
     return (
-        <a href="#"
-        onClick={e => {
-            e.preventDefault()
-            onClick(input.value)
-        }}>
-        Click to alert
-        </a>
-        <input ref={node => {
-            input = node
-            }} />
+        <div>
+              <a href="#"
+                onClick={e => {
+                    e.preventDefault()
+                    onClick(input.value)
+                }}>
+                Click to alert
+                </a>
+                <input ref={node => {
+                    input = node
+                    }} />
+        </div>
+      
     )
 }
 

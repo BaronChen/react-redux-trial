@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 import { showAlert } from './test-component.action';
-import { testComponent } from './test-component';
+import testComponent  from './test-component';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    text: state.text
+    text: state.test.text
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick: () => {
-      dispatch(showAlert(ownProps.text))
+    onClick: (text) => {
+      dispatch(showAlert(text))
     }
   }
 }
